@@ -1,1 +1,1 @@
-blackbox_exporter: python scripts/entrypoint.py
+blackbox_exporter: monitoring_blackbox/entrypoint.py
