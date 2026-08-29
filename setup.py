@@ -20,8 +20,10 @@ def download_release():
             "-L",
             "-o",
             f"/tmp/blackbox_exporter-{TARGET_RELEASE}.linux-amd64.tar.gz",
-            f"https://github.com/prometheus/blackbox_exporter/releases/download/v{TARGET_RELEASE}/"
-            f"blackbox_exporter-{TARGET_RELEASE}.linux-amd64.tar.gz",
+            (
+                f"https://github.com/prometheus/blackbox_exporter/releases/download/v{TARGET_RELEASE}/"
+                f"blackbox_exporter-{TARGET_RELEASE}.linux-amd64.tar.gz"
+            ),
         ],
         check=True,
     )
