@@ -62,7 +62,7 @@ jobs:
         run: |
           docker pull ghcr.io/${{ github.repository }}:${{ matrix.target }}-${{ github.sha }}
           docker run -d --name blackbox-exporter -p 9115:9115 \
-            --entrypoint /cnb/process/blackbox_exporter \
+            --entrypoint /cnb/process/blackbox-exporter \
             ghcr.io/${{ github.repository }}:${{ matrix.target }}-${{ github.sha }}
 
       - name: Verify blackbox exporter is ready
